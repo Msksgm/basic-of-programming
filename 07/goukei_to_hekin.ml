@@ -1,0 +1,6 @@
+(* 目的:5教科の点数を与えられたら、その合計点と平均点を組みにして返す関数 *)
+(* float -> float -> float -> float -> float -> float * float *)
+let goukei_to_heikin kokugo suugaku eigo rika shakai = (kokugo+.suugaku+.eigo+.rika+.shakai, (kokugo+.suugaku+.eigo+.rika+.shakai)/.5.)
+(* テスト *)
+let test1 = goukei_to_heikin 50. 50. 50. 50. 50. = (250., 50.)
+let test2 = goukei_to_heikin 60. 70. 50. 50. 50. = (280., 56.)
