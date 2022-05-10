@@ -41,10 +41,10 @@ let lst2 = [person3; person2; person1]
 
 (* 目的 : lst に含まれる最初のA型の人を返す *)
 (* first_A : person_t list -> person_t option *)
-let rec first_A person_list = match person_list with
-    [] -> None
-    | first::rest -> match first with
-        {name=n;shincho=s;taiju=ta;tsuki=ts;hi=h;ketsueki=k} -> if k = "A" then Some(first) else first_A rest ;;
+let rec first_A lst = match lst with
+  [] -> None
+  | first :: rest -> match first with 
+      {name=n; shincho=s; taiju=ta; tsuki=ts; hi=h; ketsueki = k} -> if k = "A" then Some (first) else first_A rest 
 (* テスト *) 
 let test1 = first_A [] = None 
 let test2 = first_A lst1 = Some (person1) 
